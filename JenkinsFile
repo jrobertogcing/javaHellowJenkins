@@ -4,7 +4,7 @@ pipeline {
         stage('Build') { 
             steps {
                 // 
-                echo "Build"
+                echo "Build";
                 mvn clean -f HelloWorld
             }
         }
@@ -19,7 +19,6 @@ pipeline {
             steps {
                 // 
                 echo "Deploy"
-                mvm package -f HelloWorld
             }
         }
     }

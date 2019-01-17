@@ -5,14 +5,13 @@ pipeline {
             steps {
                 // 
                 echo "Build"
-                javac HelloWorld.java
+                mvn clean -f HelloWorld
             }
         }
         stage('Test') { 
             steps {
                 // 
                 echo "Test"
-                java HelloWorld
 
             }
         }
@@ -20,6 +19,7 @@ pipeline {
             steps {
                 // 
                 echo "Deploy"
+                mvm package -f HelloWorld
             }
         }
     }

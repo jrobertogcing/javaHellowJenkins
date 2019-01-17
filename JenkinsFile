@@ -5,7 +5,7 @@ pipeline {
             steps {
                 // 
                 echo "Build";
-                mvn clean -f HelloWorld
+                HelloWorld.java
             }
         }
         stage('Test') { 
